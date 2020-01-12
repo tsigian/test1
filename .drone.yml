@@ -2,6 +2,10 @@ kind: pipeline
 type: docker
 name: greeting
 
+#platform:
+#  os: linux
+#  arch: amd64
+
 steps:
 - name: en
   image: alpine
@@ -9,17 +13,3 @@ steps:
   - echo hello
   - echo world
 
-- name: es
-  image: alpine
-  commands:
-  - echo hola
-  - echo mundo
-
-- name: fr
-  image: alpine
-  commands:
-  - echo bonjour
-  - echo monde
-
-node:
-  type: build
